@@ -31,12 +31,6 @@ const schema=new mongoose.Schema({
 
     orderItems:{
 
-        orderId:{
-            type:String,
-            required:true,
-            unique:true,
-        },
-
         orders:[
             {
                 name:{
