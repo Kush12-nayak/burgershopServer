@@ -31,19 +31,29 @@ const schema=new mongoose.Schema({
 
     orderItems:{
 
-        name:{
+        orderId:{
             type:String,
             required:true,
+            unique:true,
+        },
 
-        },
-        price:{
-            type:Number,
-            required:true
-        },
-        quantity:{
-            type:Number,
-            required:true
-        }
+        orders:[
+            {
+                name:{
+                    type:String,
+                    required:true,
+        
+                },
+                price:{
+                    type:Number,
+                    required:true
+                },
+                quantity:{
+                    type:Number,
+                    required:true
+                }
+            }
+        ]
     },
 
     user:{
