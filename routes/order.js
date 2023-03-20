@@ -6,7 +6,7 @@ import {getOrderDeatails} from "../controllers/order.js"
 
 const router=express.Router();
 
-router.post("/createorder",true,placeOrder)
+router.post("/createorder",isAuthincated,placeOrder)
 
 router.post("/createorderonline",isAuthincated,placeOrderOnline)
 
