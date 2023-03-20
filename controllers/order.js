@@ -18,7 +18,7 @@ export const placeOrder=asyncError(
         }
         =req.body;
     
-        const user="req.user._id";
+        const user=req.user._id;
     
         const orderOptions={
             shippingInfo,
