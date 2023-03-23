@@ -14,11 +14,11 @@ export const placeOrder=asyncError(
             itemsPrice,
             taxPrice,
             shippingCharges,
-            totalAmount
+            totalAmount,
+            user
         }
         =req.body;
-    
-        req.body.user=req.user._id;
+   
     
         const orderOptions={
             shippingInfo,
